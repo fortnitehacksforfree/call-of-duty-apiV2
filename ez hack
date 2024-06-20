@@ -238,7 +238,7 @@ function Fun.Create(title)
         end)
 
         local sectionHandling = {}
-
+--toggle
         function sectionHandling:Section(sectionName)
             ---
             sectionName = sectionName or "Section"
@@ -285,7 +285,7 @@ function Fun.Create(title)
             UICorner_3.Parent = sectionCircle
 
             TextLabel.Parent = sectionFrameHead
-            TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             TextLabel.BackgroundTransparency = 1.000
             TextLabel.Position = UDim2.new(0.0992907807, 0, 0.194444448, 0)
             TextLabel.Size = UDim2.new(0, 173, 0, 22)
@@ -295,7 +295,7 @@ function Fun.Create(title)
             TextLabel.TextSize = 14.000
             TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-            --toggle
+            --Label.text
 
             closeSection.Name = "closeSection"
             closeSection.Parent = sectionFrameHead
@@ -494,20 +494,20 @@ function Fun.Create(title)
                 checkBoxInfo.Size = UDim2.new(0, 200, 0, 19)
                 checkBoxInfo.Font = Enum.Font.Gotham
                 checkBoxInfo.Text = togInfo
-                checkBoxInfo.TextColor3 = Color3.fromRGB(150,150,150)
+                checkBoxInfo.TextColor3 = Color3.fromRGB(0,0,0)
                 checkBoxInfo.TextSize = 14.000
                 checkBoxInfo.TextXAlignment = Enum.TextXAlignment.Left
                 local clickDe = false
                 local hoverDe = false
-
+--textlabel
                 checkBox.MouseEnter:Connect(function()
                     if not tog then
                         game.TweenService:Create(checkBox, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
-                            ImageColor3 = Color3.fromRGB(53, 53, 63)
+                            ImageColor3 = Color3.fromRGB(0, 0, 0)
                         }):Play()
                     else
                         game.TweenService:Create(checkBox, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
-                            ImageColor3 = Color3.fromRGB(89, 68, 102)
+                            ImageColor3 = Color3.fromRGB(0, 0, 0)
                         }):Play()
                     end
                 end)
@@ -516,7 +516,7 @@ function Fun.Create(title)
                     if not tog then
                         checkBox.Parent:TweenSize(UDim2.new(0, 262,0, 25), "InOut", "Linear", 0.08)
                         game.TweenService:Create(checkBox, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
-                            ImageColor3 = Color3.fromRGB(62, 62, 74)
+                            ImageColor3 = Color3.fromRGB(0, 0, 0)
                         }):Play()
                     else
                         checkBox.Parent:TweenSize(UDim2.new(0, 262,0, 25), "InOut", "Linear", 0.08)
@@ -553,11 +553,11 @@ function Fun.Create(title)
                             }):Play()
                         else
                             game.TweenService:Create(checkBox.Parent.checkBoxInfo, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
-                                TextColor3 = Color3.fromRGB(62, 62, 74)
+                                TextColor3 = Color3.fromRGB(0, 0, 0)
                             }):Play()
                             checkBox.ImageRectOffset = Vector2.new(940, 784)
                             game.TweenService:Create(checkBox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
-                                ImageColor3 = Color3.fromRGB(62, 62, 74)
+                                ImageColor3 = Color3.fromRGB(0, 0, 0)
                             }):Play()
                         end
                         wait(0.8)
@@ -565,6 +565,7 @@ function Fun.Create(title)
                     end
                 end)
             end
+            --slider
                 function itemHandling:TextBox(textInfo, callback)
                     textInfo = textInfo or "Type here"
                     callback = callback or function() end
@@ -596,10 +597,10 @@ function Fun.Create(title)
                     TextBox.Font = Enum.Font.SourceSans
                     TextBox.PlaceholderText = textInfo
                     TextBox.Text = ""
-                    TextBox.TextColor3 = Color3.fromRGB(0,0,0)
+                    TextBox.TextColor3 = Color3.fromRGB(255,255,255)
                     TextBox.TextSize = 16.000
                     TextBox.TextWrapped = true
-
+--label
                     UICorner.CornerRadius = UDim.new(0, 5)
                     UICorner.Parent = TextBox
 
@@ -677,8 +678,8 @@ function Fun.Create(title)
 
                     SliderDrag.Name = "SliderDrag"
                     SliderDrag.Parent = sliderBtn
-                    SliderDrag.BackgroundColor3 = Color3.fromRGB(0,0,0)
-                    SliderDrag.BorderColor3 = Color3.fromRGB(0,0,0)
+                    SliderDrag.BackgroundColor3 = Color3.fromRGB(255,255,255)
+                    SliderDrag.BorderColor3 = Color3.fromRGB(255,255,255)
                     SliderDrag.BorderSizePixel = 0
                     SliderDrag.Size = UDim2.new(0, 0, 0, 9)
 
@@ -687,7 +688,7 @@ function Fun.Create(title)
 
                     UICorner_1.CornerRadius = UDim.new(0, 99)
                     UICorner_1.Parent = sliderBtn
-
+--toggle
                     sliderBox.Name = "sliderBox"
                     sliderBox.Parent = sliderFrame
                     sliderBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -697,7 +698,7 @@ function Fun.Create(title)
                     sliderBox.ClearTextOnFocus = false
                     sliderBox.Font = Enum.Font.Gotham
                     sliderBox.Text = minvalue
-                    sliderBox.TextColor3 = Color3.fromRGB(96, 96, 115)
+                    sliderBox.TextColor3 = Color3.fromRGB(0, 0, 0)
                     sliderBox.TextScaled = true
                     sliderBox.TextSize = 14.000
                     sliderBox.TextWrapped = true
@@ -844,13 +845,13 @@ function Fun.Create(title)
                     local TextLabel = Instance.new("TextLabel")
 
                     TextLabel.Parent = sectionFrame
-                    TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                    TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                     TextLabel.BackgroundTransparency = 1.000
                     TextLabel.Position = UDim2.new(0.0390070938, 0, 0.826923072, 0)
                     TextLabel.Size = UDim2.new(0, 260, 0, 27)
                     TextLabel.Font = Enum.Font.Gotham
                     TextLabel.Text = txtLabel
-                    TextLabel.TextColor3 = Color3.fromRGB(198, 198, 198)
+                    TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
                     TextLabel.TextSize = 14.000
                     TextLabel.TextXAlignment = Enum.TextXAlignment.Left
                 end
@@ -889,7 +890,7 @@ function Fun.Create(title)
                     keybindBtn.Text = oldKey
                     keybindBtn.TextColor3 = Color3.fromRGB(204, 204, 204)
                     keybindBtn.TextSize = 14.000
-
+--toggle
                     UICorner.CornerRadius = UDim.new(0, 5)
                     UICorner.Parent = keybindBtn
 
